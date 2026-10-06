@@ -17,7 +17,11 @@ jobs:
           java-version: '17'
           cache: 'gradle'
 
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x ./gradlew
+
       - name: Build Debug APK
-        run: gradle assembleDebug
+        run: ./gradlew assembleDebug
+        
         
           
