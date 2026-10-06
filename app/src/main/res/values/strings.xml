@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LocalWell</string>
+    <string name="nav_billing">Billing</string>
+    <string name="nav_inventory">Inventory</string>
+    <string name="nav_khata">Udhar Khata</string>
+    <string name="nav_reports">Reports</string>
+    <string name="search_medicines_hint">Search medicine or salt composition...</string>
+</resources>

@@ -1,0 +1,6 @@
+{
+  "name": "LocalWell Pharmacy",
+  "description": "Smart pharmacy billing, batch inventory management, GST invoices, FEFO tracking, and digital Udhar Khata.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
