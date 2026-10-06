@@ -1,32 +1,20 @@
-name: Build Android APK
+name: Find Project Folder
 
 on:
   workflow_dispatch:
 
 jobs:
-  build:
+  check-folders:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'zulu'
-          java-version: '17'
-
-      - name: Install System Gradle
-        run: sudo apt-get update && sudo apt-get install -y gradle
-
-      - name: Build Debug APK
-        run: gradle assembleDebug
-
-      - name: Upload APK Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Royal-Pharma-Debug-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+      - name: List All Folders
+        run: |
+          echo "=== Root Folder Contents ==="
+          ls -R
+          
           
           
         
