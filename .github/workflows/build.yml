@@ -1,7 +1,7 @@
 name: Build Android APK
 
 on:
-  workflow_dispatch: # Allows you to run this manually anytime
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,15 +17,7 @@ jobs:
           java-version: '17'
           cache: 'gradle'
 
-      - name: Grant Execute Permission to Gradle
-        run: chmod +x gradlew
-
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
-
-      - name: Upload APK Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: PharmaCare-Pro-Debug-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+        run: gradle assembleDebug
+        
           
