@@ -19,6 +19,7 @@ jobs:
       - name: Setup and Execute Gradle Build
         uses: gradle/gradle-build-action@v3
         with:
+          gradle-version: wrapper # This automatically generates the missing wrapper files
           arguments: assembleDebug
 
       - name: Upload APK Artifact
